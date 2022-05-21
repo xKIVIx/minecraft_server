@@ -50,6 +50,7 @@ RUN wget \
     https://media.forgecdn.net/files/2686/991/specialai-1.1.0_for_mc1.12.2.jar \
     https://media.forgecdn.net/files/2687/757/railcraft-12.0.0.jar \
     https://media.forgecdn.net/files/2659/2/mowziesmobs-1.5.0.jar \
+    https://media.forgecdn.net/files/2505/7/llibrary-1.7.9-1.12.jar \
     https://media.forgecdn.net/files/2915/363/CTM-MC1.12.2-1.0.2.31.jar
 
 # ----------------------
