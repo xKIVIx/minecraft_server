@@ -64,5 +64,8 @@ RUN echo eula=true > eula.txt
 COPY server.properties .
 RUN mkdir mohist-config
 COPY mohist.yml mohist-config/
+USER root
+RUN chmod 777 mohist.yml
+USER minecraftserver
 
 CMD java -Xms4G -Xmx4G -jar server.jar
