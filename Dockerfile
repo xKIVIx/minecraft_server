@@ -26,7 +26,6 @@ RUN wget -O server.jar https://mohistmc.com/builds/1.12.2/mohist-1.12.2-321-serv
 WORKDIR /home/minecraftserver/mods
 
 RUN wget \
-    https://media.forgecdn.net/files/2628/698/DrZharks+MoCreatures+Mod-12.0.5.jar \
     https://media.forgecdn.net/files/3081/433/DivineRPG-1.7.1.jar \
     https://media.forgecdn.net/files/3051/450/twilightforest-1.12.2-3.11.1021-universal.jar \
     https://media.forgecdn.net/files/2915/375/Chisel-MC1.12.2-1.0.2.45.jar \
@@ -47,7 +46,11 @@ RUN wget \
     https://media.forgecdn.net/files/3488/758/mcw-trapdoors-1.0.3-mc1.12.2.jar \
     https://media.forgecdn.net/files/2518/667/Baubles-1.12-1.5.2.jar \
     https://media.forgecdn.net/files/2713/386/Mantle-1.12-1.3.3.55.jar \
-    https://media.forgecdn.net/files/3346/568/PTRLib-1.0.5.jar
+    https://media.forgecdn.net/files/3346/568/PTRLib-1.0.5.jar \
+    https://media.forgecdn.net/files/2686/991/specialai-1.1.0_for_mc1.12.2.jar \
+    https://media.forgecdn.net/files/2687/757/railcraft-12.0.0.jar \
+    https://media.forgecdn.net/files/2659/2/mowziesmobs-1.5.0.jar \
+    https://media.forgecdn.net/files/2915/363/CTM-MC1.12.2-1.0.2.31.jar
 
 # ----------------------
 
