@@ -65,7 +65,7 @@ COPY server.properties .
 RUN mkdir mohist-config
 COPY mohist.yml mohist-config/
 USER root
-RUN chmod 777 mohist.yml
+RUN chmod 777 mohist-config/mohist.yml
 USER minecraftserver
 
 CMD java -Xms4G -Xmx4G -jar server.jar
