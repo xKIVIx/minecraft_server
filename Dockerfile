@@ -47,10 +47,9 @@ RUN wget \
     https://media.forgecdn.net/files/2518/667/Baubles-1.12-1.5.2.jar \
     https://media.forgecdn.net/files/2713/386/Mantle-1.12-1.3.3.55.jar \
     https://media.forgecdn.net/files/3346/568/PTRLib-1.0.5.jar \
-    https://media.forgecdn.net/files/2686/991/specialai-1.1.0_for_mc1.12.2.jar \
+    https://media.forgecdn.net/files/2450/734/AIImprovements-1.12-0.0.1b3.jar \
     https://media.forgecdn.net/files/2687/757/railcraft-12.0.0.jar \
-    https://media.forgecdn.net/files/2659/2/mowziesmobs-1.5.0.jar \
-    https://media.forgecdn.net/files/3116/493/llibrary-1.7.20-1.12.2.jar
+    https://media.forgecdn.net/files/3431/758/InfernalMobs-1.12.2.jar \
 
 # ----------------------
 
