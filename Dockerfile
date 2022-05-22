@@ -49,7 +49,7 @@ RUN wget \
     https://media.forgecdn.net/files/3346/568/PTRLib-1.0.5.jar \
     https://media.forgecdn.net/files/2450/734/AIImprovements-1.12-0.0.1b3.jar \
     https://media.forgecdn.net/files/2687/757/railcraft-12.0.0.jar \
-    https://media.forgecdn.net/files/3431/758/InfernalMobs-1.12.2.jar \
+    https://media.forgecdn.net/files/3431/758/InfernalMobs-1.12.2.jar
 
 # ----------------------
 
