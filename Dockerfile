@@ -46,7 +46,7 @@ RUN wget \
     https://media.forgecdn.net/files/3484/394/Roots-1.12.2-3.1.4.jar \
     https://media.forgecdn.net/files/2440/637/davincisvessels-1.12-2.331-full.jar \
     https://media.forgecdn.net/files/3007/966/movingworld-1.12-6.353-full.jar \
-    https://media.forgecdn.net/files/2756/266/MysticWorld-1.12.2-1.4.0.jar \
+    https://media.forgecdn.net/files/3460/961/mysticalworld-1.12.2-1.11.0.jar \
     https://media.forgecdn.net/files/3162/874/Patchouli-1.0-23.6.jar \
     https://media.forgecdn.net/files/3483/816/mysticallib-1.12.2-1.13.0.jar
 
