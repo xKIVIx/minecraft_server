@@ -37,26 +37,22 @@ RUN wget \
     https://media.forgecdn.net/files/2684/780/forestry_1.12.2-5.8.2.387.jar \
     https://media.forgecdn.net/files/3252/551/backpacked-1.4.3-1.12.2.jar \
     https://media.forgecdn.net/files/3330/934/Botania+r1.10-364.4.jar \
-    https://media.forgecdn.net/files/3347/832/Decocraft-2.6.3.7_1.12.2.jar \
-    https://media.forgecdn.net/files/3383/460/mcw-bridges-1.0.6b-mc1.12.2.jar \
-    https://media.forgecdn.net/files/2884/962/mcw-windows-1.0.0-mc1.12.2.jar \
-    https://media.forgecdn.net/files/3340/797/mcw-doors-1.0.3-mc1.12.2.jar \
-    https://media.forgecdn.net/files/2879/573/mcw-roofs-1.0.2-mc1.12.2.jar \
-    https://media.forgecdn.net/files/3231/561/mcw-fences-1.0.0-mc1.12.2.jar \
-    https://media.forgecdn.net/files/3488/758/mcw-trapdoors-1.0.3-mc1.12.2.jar \
     https://media.forgecdn.net/files/2518/667/Baubles-1.12-1.5.2.jar \
     https://media.forgecdn.net/files/2713/386/Mantle-1.12-1.3.3.55.jar \
     https://media.forgecdn.net/files/3346/568/PTRLib-1.0.5.jar \
     https://media.forgecdn.net/files/2450/734/AIImprovements-1.12-0.0.1b3.jar \
     https://media.forgecdn.net/files/2687/757/railcraft-12.0.0.jar \
-    https://media.forgecdn.net/files/3431/758/InfernalMobs-1.12.2.jar
+    https://media.forgecdn.net/files/3431/758/InfernalMobs-1.12.2.jar \
+    https://media.forgecdn.net/files/3484/394/Roots-1.12.2-3.1.4.jar \
+    https://media.forgecdn.net/files/2440/637/davincisvessels-1.12-2.331-full.jar
 
 # ----------------------
 
 WORKDIR /home/minecraftserver/plugins
 
 RUN wget \
-    https://media.forgecdn.net/files/2820/73/AuthMe-5.6.0-SNAPSHOT.jar
+    https://media.forgecdn.net/files/2820/73/AuthMe-5.6.0-SNAPSHOT.jar \
+    https://media.forgecdn.net/files/2365/294/AutoSaveWorld.jar
 
 # ----------------------
 WORKDIR /home/minecraftserver
@@ -70,4 +66,7 @@ USER root
 RUN chmod 777 mohist-config/mohist.yml
 USER minecraftserver
 
-CMD java -Xms4G -Xmx4G -jar server.jar
+ENV MAX_RAM=6
+ENV MIN_RAM=3
+
+CMD java -Xms${MIN_RAM}G -Xmx${MAX_RAM}G -jar server.jar
