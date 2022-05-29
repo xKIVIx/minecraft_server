@@ -73,4 +73,8 @@ ADD mohist.yml mohist-config/
 ENV MAX_RAM=6
 ENV MIN_RAM=3
 
+USER root
+RUN chown -R minecraftserver *
+USER minecraftserver
+
 CMD java -Xms${MIN_RAM}G -Xmx${MAX_RAM}G -jar server.jar
