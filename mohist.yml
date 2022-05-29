@@ -37,7 +37,7 @@ forge:
 mohist:
   use_custom_java8: false
   disable_config_update: false
-  check_update: true
+  check_update: false
   downloadfile_command_enabled: false
   server-type: FML
   BukkitPermissionsHandler: true

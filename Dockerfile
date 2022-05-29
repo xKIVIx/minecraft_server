@@ -3,6 +3,7 @@ FROM ubuntu:16.04
 RUN apt-get update ; \
     DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
         wget \
+        vim \
         default-jre-headless \
         ; \
     apt-get autoremove -y ; apt-get clean; rm /var/lib/apt/lists/* -r ; \
@@ -16,7 +17,6 @@ RUN useradd -ms /bin/bash minecraftserver
 USER minecraftserver
 WORKDIR /home/minecraftserver
 
-RUN mkdir plugins
 RUN mkdir mods
 
 RUN wget -O server.jar https://mohistmc.com/builds/1.12.2/mohist-1.12.2-321-server.jar
@@ -42,17 +42,20 @@ RUN wget \
     https://media.forgecdn.net/files/3346/568/PTRLib-1.0.5.jar \
     https://media.forgecdn.net/files/2450/734/AIImprovements-1.12-0.0.1b3.jar \
     https://media.forgecdn.net/files/2687/757/railcraft-12.0.0.jar \
-    https://media.forgecdn.net/files/3431/758/InfernalMobs-1.12.2.jar \
     https://media.forgecdn.net/files/3484/394/Roots-1.12.2-3.1.4.jar \
-    https://media.forgecdn.net/files/2440/637/davincisvessels-1.12-2.331-full.jar \
-    https://media.forgecdn.net/files/3007/966/movingworld-1.12-6.353-full.jar \
     https://media.forgecdn.net/files/3460/961/mysticalworld-1.12.2-1.11.0.jar \
     https://media.forgecdn.net/files/3162/874/Patchouli-1.0-23.6.jar \
-    https://media.forgecdn.net/files/3483/816/mysticallib-1.12.2-1.13.0.jar
+    https://media.forgecdn.net/files/3483/816/mysticallib-1.12.2-1.13.0.jar \
+    https://media.forgecdn.net/files/3204/475/buildcraft-all-7.99.24.8.jar \
+    https://media.forgecdn.net/files/3078/604/industrialcraft-2-2.8.221-ex112.jar \
+    https://media.forgecdn.net/files/2629/23/Thaumcraft-1.12.2-6.1.BETA26.jar
 
 # ----------------------
 
+RUN mkdir /home/minecraftserver/plugins
 WORKDIR /home/minecraftserver/plugins
+
+ADD plugins/AutoSaveWorld .
 
 RUN wget \
     https://media.forgecdn.net/files/2820/73/AuthMe-5.6.0-SNAPSHOT.jar \
@@ -63,12 +66,9 @@ WORKDIR /home/minecraftserver
 
 RUN echo eula=true > eula.txt
 
-COPY server.properties .
+ADD server.properties .
 RUN mkdir mohist-config
-COPY mohist.yml mohist-config/
-USER root
-RUN chmod 777 mohist-config/mohist.yml
-USER minecraftserver
+ADD mohist.yml mohist-config/
 
 ENV MAX_RAM=6
 ENV MIN_RAM=3
